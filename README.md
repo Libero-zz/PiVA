@@ -1,5 +1,5 @@
 # PiVA
-It's a project to do simple video analytic functions on raspberry pi. It could run on all kinds of platform (x86, arm) theoretically. However, the prebuilt ncnn library is based on raspberry pi model 3b+, which uses an A53 cpu. You're encouraged to build ncnn library based on your architecture. Raspberry pi model above 3b is recommended(3b, 3b+, 4b), Jetson nano should also works really well.
+It's a project to do simple video analytic functions on raspberry pi. It could run on all kinds of platform (x86, arm) theoretically. However, the prebuilt ncnn library is based on raspberry pi model 3b+, which uses an A53 cpu. You're encouraged to build ncnn library based on your architecture. Raspberry pi model above 3b is recommended(3b, 3b+, 4b), Jetson nano should also work well.
 
 ## Prerequisite
 opencv  
