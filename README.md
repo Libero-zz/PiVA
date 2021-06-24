@@ -2,7 +2,7 @@
 It's a project to do simple video analytic functions on raspberry pi. It could run on all kinds of platform (x86, arm) theoretically. However, the prebuilt ncnn library is based on raspberry pi model 3b+, which uses an A53 cpu. You're encouraged to build ncnn library based on your architecture. Raspberry pi model above 3b is recommended(3b, 3b+, 4b), Jetson nano should also works really well.
 
 ## Prerequisite
-opencv
+opencv  
 cmake
 
 ## Compile
@@ -19,22 +19,22 @@ cmake
 
 ## Usage
 ### piva
-description: Main loop of PiVA
-usage: piva [param]
-param: camera dev number. usually 0
+description: Main loop of PiVA  
+usage: piva [param]  
+param: camera dev number. usually 0  
 
 ### cropface
-dedscription: Simple helper function to make face database
-usage cropface [param]
-param: image path to crop faces
-output: faces in image.jpg
+dedscription: Simple helper function to make face database  
+usage cropface [param]  
+param: image path to crop faces  
+output: faces in image.jpg  
 
 ### control
-description: Control of piva
-usage: control [param1] [param2]
-param1: fd/fr/bbox/landmark/realface
-param2: open/close
-example:
+description: Control of piva  
+usage: control [param1] [param2]  
+param1: fd/fr/bbox/landmark/realface  
+param2: open/close  
+example:  
 ```
 ./control fd open #enable face detection
 ./control fd close #disable face detection
