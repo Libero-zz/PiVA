@@ -27,8 +27,9 @@ ADD_EXECUTABLE(piva
                src/mobilefacenet.cpp
                src/live.cpp
                src/facedetection.cpp
-               src/facedatabase.cpp)
-TARGET_LINK_LIBRARIES(piva ncnn ${OpenCV_LIBS})
+               src/facedatabase.cpp
+               src/autotracker.cpp)
+TARGET_LINK_LIBRARIES(piva ncnn pigpio ${OpenCV_LIBS})
 INSTALL(TARGETS piva
         DESTINATION ${CMAKE_INSTALL_PREFIX})
 

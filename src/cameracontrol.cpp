@@ -19,7 +19,8 @@ int main(int argc, char* argv[]) {
 		                                     {"bbox", CONTROL::BOUNDING_BOX},
 		                                     {"landmark", CONTROL::LANDMARK},
 		                                     {"realface", CONTROL::ANTI_SPOOFING},
-		                                     {"cropface", CONTROL::CROP_FACE}};
+		                                     {"cropface", CONTROL::CROP_FACE},
+		                                     {"track", CONTROL::TRACK}};
 
 	char command = 0x0;
 	if (arg2 == "open")

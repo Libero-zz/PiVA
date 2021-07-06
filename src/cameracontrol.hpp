@@ -16,6 +16,7 @@ enum class CONTROL {
     LANDMARK = 3,
     ANTI_SPOOFING = 4,
     CROP_FACE = 5,
+    TRACK = 6
 };
 
 char *createShm() {

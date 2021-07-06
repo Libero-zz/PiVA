@@ -17,6 +17,7 @@
 #include "facedetection.hpp"
 #include "mobilefacenet.hpp"
 #include "live.hpp"
+#include "autotracker.hpp"
 
 int main(int argc, char* argv[]) {
     if(argc != 2) {
@@ -52,6 +53,9 @@ int main(int argc, char* argv[]) {
     configs.emplace_back(config1);
 //    configs.emplace_back(config2);
     live.LoadModel(configs);
+    
+    // Auto tracker
+    AutoTracker autotracker;
 
     cv::String title = cv::String("Detection Results on") + cv::String(argv[1]);
 
@@ -152,6 +156,10 @@ int main(int argc, char* argv[]) {
 		}
 	    }
             facedetectionnet.draw(im, dets, command[static_cast<int>(CONTROL::BOUNDING_BOX)], command[static_cast<int>(CONTROL::LANDMARK)]);
+	    
+	    if (command[static_cast<int>(CONTROL::TRACK)]) {
+		autotracker.track(dets, im.cols/2, im.rows/2);
+	    }
 	    
             cvtm.stop();
 
